@@ -1,0 +1,25 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+solana-client = "2.2.7"
+solana-sdk = "2.2.2"
+solana-system-interface = "2.0.0"
+solana-account-decoder-client-types = "2.2.7"
+curve25519-dalek = "4.1.3"
+x25519-dalek = { version = "2.0.1", features = ["static_secrets"] }
+hkdf = "0.12.4"
+sha2 = "0.10.9"
+aes-gcm = "0.10.3"
+rand_core = "^0.6"
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+borsh = "1.5.7"
+futures = "0.3.31"
+lazy_static = "1.5.0"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.142"
+
+[lib]
+crate-type = ["cdylib"]
